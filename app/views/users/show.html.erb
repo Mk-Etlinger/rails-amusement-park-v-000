@@ -1,0 +1,14 @@
+<%= notice if notice.present? %>
+<%= alert if alert.present? %>
+
+<% if @user.admin %>
+    <h2>ADMIN</h2>
+<% end %>
+
+<%= @user.name %>
+Mood: <%= @user.mood %>
+Tickets: <%= @user.tickets %>
+Height: <%= @user.height %>
+
+<%= link_to "Log Out", session_path, method: "delete"%>
+<%= link_to "See attractions", attractions_path %>
